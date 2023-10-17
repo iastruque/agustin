@@ -96,7 +96,7 @@ connectButton.onclick = async () => {
     method: 'POST',
     headers: {'Authorization': `Basic ${DID_API.key}`, 'Content-Type': 'application/json'},
     body: JSON.stringify({
-      source_url: "https://respaldos-bech.s3.ap.cloud-object-storage.appdomain.cloud/sgustin_hd.png"
+      source_url: "https://respaldos-bech.s3.ap.cloud-object-storage.appdomain.cloud/agustin_2048.png"
     }),
   });
 
