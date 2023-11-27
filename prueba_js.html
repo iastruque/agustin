@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+</head>
+
+<body>
+  Hello world
+  <script>
+    // Cadena de texto con comas
+    let cadenaConComas = "No soy un experto pero la cantidad de residuos electrónicos ha aumentado significativamente de 10,854 kg en 2021 a 34,665 kg en 2022.";
+
+    // Reemplazar comas por puntos
+    let cadenaConPuntos = cadenaConComas.replace(/,/g, '.');
+
+    // Imprimir el resultado
+    console.log(cadenaConPuntos);
+
+
+    function formatearCadena(cadena) {
+  // Reemplazar comas entre dos números por puntos
+  cadena = cadena.replace(/(\d),(?=\d)/g, '$1.');
+
+  // Agregar puntos a los números que no tienen
+  cadena = cadena.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+
+  return cadena;
+}
+
+// Ejemplo de uso
+let cadenaOriginal = "No soy un experto pero la cantidad de residuos electrónicos ha aumentado significativamente de 10,854 kg en 2021 a 34,665 kg en 2022.";
+let cadenaFormateada = formatearCadena(cadenaOriginal);
+
+console.log("Cadena Original: ", cadenaOriginal);
+console.log("Cadena Formateada: ", cadenaFormateada);
+    
+  </script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

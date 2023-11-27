@@ -73,6 +73,17 @@ function alignElementToRight() {
   }
 }
 
+function formatearCadena(cadena) {
+  // Reemplazar comas entre dos números por puntos
+  cadena = cadena.replace(/(\d),(?=\d)/g, '$1.');
+
+  // Agregar puntos a los números que no tienen
+  cadena = cadena.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+
+  return cadena;
+}
+
+
 const talkVideo = document.getElementById('talk-video');
 talkVideo.setAttribute('playsinline', '');
 const peerStatusLabel = document.getElementById('peer-status-label');
@@ -211,7 +222,7 @@ talkButton2.onclick = async () => {
               'voice_id': 'es-AR-TomasNeural'
             },
             'ssml': 'false',
-            'input': watsonResponseChat
+            'input': formatearCadena(watsonResponseChat)
           },
           'config': {
             'stitch': true,
