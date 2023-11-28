@@ -79,7 +79,7 @@ function formatearCadena(cadena) {
 
   // Agregar puntos a los números que no tienen
   cadena = cadena.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
-  cadena = cadena.replace(/<br\s*\/?>/g, '');
+  cadena = cadena.replace(/<br \/>/g, '');
 
   return cadena;
 }

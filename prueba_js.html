@@ -11,7 +11,7 @@
   Hello world
   <script>
     // Cadena de texto con comas
-    let cadenaConComas = "No soy un experto pero la cantidad de residuos electrónicos ha aumentado significativamente de 10,854 kg en 2021 a 34,665 kg en 2022.";
+    let cadenaConComas = "No soy un experto pero la cantidad de residuos electrónicos ha aumentado significativamente de 10,854 kg en 2021 a 34,665 kg en 2022. <br />";
 
     // Reemplazar comas por puntos
     let cadenaConPuntos = cadenaConComas.replace(/,/g, '.');
@@ -21,14 +21,15 @@
 
 
     function formatearCadena(cadena) {
-  // Reemplazar comas entre dos números por puntos
-  cadena = cadena.replace(/(\d),(?=\d)/g, '$1.');
+    // Reemplazar comas entre dos números por puntos
+    cadena = cadena.replace(/(\d),(?=\d)/g, '$1.');
 
-  // Agregar puntos a los números que no tienen
-  cadena = cadena.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+    // Agregar puntos a los números que no tienen
+    cadena = cadena.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+    cadena = cadena.replace(/<br \/>/g, '');
 
-  return cadena;
-}
+    return cadena;
+    }
 
 // Ejemplo de uso
 let cadenaOriginal = "No soy un experto pero la cantidad de residuos electrónicos ha aumentado significativamente de 10,854 kg en 2021 a 34,665 kg en 2022.";
