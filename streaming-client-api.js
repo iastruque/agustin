@@ -209,7 +209,7 @@ talkButton2.onclick = async () => {
     watsonResponseChat = concatenateTexts(outputWatson.generic);
     console.log(watsonResponseChat); */
     borrarTexto();
-    addMessageToChat(watsonResponseChat, false);
+    addMessageToChat(watsonResponseChat.replace(/<br \/>/g, ''), false);
 
     const talkResponse = await fetch(`${DID_API.url}/talks/streams/${streamId}`,
       {
