@@ -13,7 +13,7 @@ let sessionClientAnswer;
 let watsonSessionId;
 let watsonAnswer;
 let watsonResponseChat;
-let mensaje_chat;
+let mensaje_chat; 
 let trimmedResponse;
 
 function concatenateTexts(arr) {
