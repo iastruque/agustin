@@ -214,13 +214,13 @@ talkButton2.onclick = async () => {
     const talkResponse = await fetch(`${DID_API.url}/talks/streams/${streamId}`,
       {
         method: 'POST',
-        headers: { Authorization: `Basic ${DID_API.key}`, 'Content-Type': 'application/json' },
+        headers: { Authorization: `Basic ${DID_API.key}`, 'Content-Type': 'application/json', "x-api-key-external": "{\"elevenlabs\": \"fadb739d33c173497413366c013596f7\"}" },
         body: JSON.stringify({
           'script': {
             'type': 'text',
             'provider': {
-              'type': 'microsoft',
-              'voice_id': 'es-AR-TomasNeural'
+              'type': 'elevenlabs',
+              'voice_id': '6Zfs9BbYdGZnjRw1whb1'
             },
             'ssml': 'false',
             'input': formatearCadena(watsonResponseChat)
